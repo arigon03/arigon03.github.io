@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Arigon Ramosaj</title>
+<meta name="description" content="Arigon Ramosaj · Zürich. Built Differently, ONYX und RELAXI an einem Ort.">
+<meta name="theme-color" content="#0B0C0E">
+<meta property="og:title" content="Arigon Ramosaj">
+<meta property="og:description" content="Drei Marken. Ein Kodex. Built Differently · ONYX · RELAXI">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://arigon03.github.io/og.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/PlayfairDisplay.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/Oswald.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:Playfair;src:url(assets/fonts/PlayfairDisplay.woff2) format("woff2");font-display:swap}
+@font-face{font-family:Oswald;src:url(assets/fonts/Oswald.woff2) format("woff2");font-display:swap}
+@font-face{font-family:Garamond;src:url(assets/fonts/EBGaramond.woff2) format("woff2");font-display:swap}
+@font-face{font-family:Garamond;font-style:italic;src:url(assets/fonts/EBGaramond-Italic.woff2) format("woff2");font-display:swap}
+:root{
+  --bg:#0B0C0E; --panel:#131418; --line:rgba(201,162,39,.38); --gold:#C9A227; --champ:#D8C08A;
+  --ivory:#EFE8DA; --muted:#8E8A80; --cream:#FBF6EA; --ink:#1B1A17;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg)}
+body{min-height:100svh;background:
+  radial-gradient(120% 60% at 50% -10%,rgba(201,162,39,.10),transparent 60%),var(--bg);
+  color:var(--ivory);font-family:Garamond,Georgia,serif;-webkit-font-smoothing:antialiased;
+  display:flex;justify-content:center;padding:max(40px,env(safe-area-inset-top)) 16px max(32px,env(safe-area-inset-bottom))}
+main{width:100%;max-width:440px;display:flex;flex-direction:column;align-items:center}
+.kicker,.label,.btn,.social a,footer{font-family:Oswald,Arial Narrow,sans-serif;text-transform:uppercase}
+
+/* Kopf */
+.portrait{width:112px;height:112px;border-radius:50%;padding:3px;border:1px solid var(--line);
+  background:var(--bg);box-shadow:0 0 0 6px rgba(201,162,39,.05)}
+.portrait img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
+h1{font-family:Playfair,Georgia,serif;font-weight:400;font-size:30px;letter-spacing:.04em;margin-top:22px;text-align:center}
+.kicker{font-size:12px;letter-spacing:.34em;color:var(--gold);margin-top:10px;text-align:center}
+.rule{width:44px;height:1px;background:var(--gold);margin:22px auto 18px;opacity:.8}
+.motto{font-style:italic;font-size:19px;color:#D9D2C3;text-align:center;line-height:1.35}
+
+/* Karten */
+.cards{width:100%;display:flex;flex-direction:column;gap:14px;margin-top:34px}
+.card{position:relative;display:flex;align-items:center;gap:16px;min-height:112px;padding:18px 18px 18px 18px;
+  border-radius:4px;text-decoration:none;color:inherit;border:1px solid var(--line);background:var(--panel);
+  transition:transform .18s ease,border-color .18s ease,background .18s ease}
+.card:hover{transform:translateY(-2px);border-color:var(--gold)}
+.card:active{transform:translateY(0) scale(.99)}
+.card:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.card .txt{flex:1;min-width:0}
+.label{font-size:11px;letter-spacing:.3em;color:var(--muted)}
+.name{font-family:Playfair,Georgia,serif;font-size:23px;letter-spacing:.06em;margin-top:6px;line-height:1.1}
+.desc{font-size:16.5px;color:#C9C2B3;margin-top:6px;line-height:1.3}
+.arrow{flex:none;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--gold)}
+.arrow svg{width:14px;height:14px}
+
+/* Built Differently */
+.bd .cover{flex:none;width:62px;height:88px;object-fit:cover;border:1px solid rgba(201,162,39,.5);box-shadow:0 6px 18px rgba(0,0,0,.5)}
+.bd .name{font-size:22px}
+/* ONYX */
+.onyx{background:linear-gradient(135deg,#0A0A0B 0%,#17171A 60%,#0A0A0B 100%)}
+.onyx .mark{flex:none;width:62px;height:88px;display:grid;place-items:center;border:1px solid rgba(216,192,138,.45)}
+.onyx .mark span{font-family:Playfair,Georgia,serif;font-size:12px;letter-spacing:.2em;color:var(--champ);padding-left:.32em}
+.onyx .name{color:var(--champ);letter-spacing:.28em}
+/* RELAXI */
+.relaxi{background:var(--cream);border-color:#E6DCC5;color:var(--ink)}
+.relaxi .label{color:#8A7F68}
+.relaxi .desc{color:#4A463E}
+.relaxi .mark{flex:none;width:62px;height:88px;display:grid;place-items:center;border:1px solid #D9CCAE;background:#F4EDDC}
+.relaxi .mark span{font-family:Oswald,sans-serif;font-size:12px;letter-spacing:.24em;color:#6E6450;padding-left:.24em}
+.relaxi .arrow{border-color:#D9CCAE;color:#6E6450}
+.relaxi:hover{border-color:#BFAF8A}
+
+/* Social */
+.handle{font-family:Oswald,sans-serif;font-size:12px;letter-spacing:.3em;color:var(--gold);margin-top:38px}
+.social{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;justify-content:center}
+.social a{font-size:12px;letter-spacing:.22em;color:var(--ivory);text-decoration:none;padding:11px 20px;min-width:128px;text-align:center;
+  border:1px solid rgba(239,232,218,.18);border-radius:999px;transition:border-color .18s}
+.social a:hover{border-color:var(--gold)}
+.social a b{color:var(--gold);font-weight:400}
+footer{margin-top:38px;font-size:10.5px;letter-spacing:.3em;color:#5E5B55;text-align:center}
+@media (max-width:360px){.card{gap:12px;padding:16px 14px}.name{font-size:20px}.bd .name{font-size:19px}.desc{font-size:15.5px}}
+@media (prefers-reduced-motion:reduce){.card{transition:none}}
+</style>
+</head>
+<body>
+<main>
+  <div class="portrait"><img src="assets/arigon.jpg" alt="Arigon Ramosaj" width="106" height="106"></div>
+  <h1>Arigon Ramosaj</h1>
+  <p class="kicker">Zürich · Unternehmer</p>
+  <div class="rule" aria-hidden="true"></div>
+  <p class="motto">Drei Marken. Ein Kodex.</p>
+
+  <nav class="cards" aria-label="Meine Marken">
+    <a class="card bd" href="https://builtdifferently.ch">
+      <img class="cover" src="assets/bd-cover.jpg" alt="" width="62" height="88">
+      <div class="txt">
+        <p class="label">Das E-Book</p>
+        <p class="name">Built Differently</p>
+        <p class="desc">Was dir Schule, Bank und Chef nie erklärt haben.</p>
+      </div>
+      <span class="arrow" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+    </a>
+
+    <a class="card onyx" href="https://www.instagram.com/ONYX_HANDLE/" rel="noopener">
+      <div class="mark" aria-hidden="true"><span>ONYX</span></div>
+      <div class="txt">
+        <p class="label">Autovermietung</p>
+        <p class="name">ONYX</p>
+        <p class="desc">Sportwagen in Zürich. Drive in Style.</p>
+      </div>
+      <span class="arrow" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+    </a>
+
+    <a class="card relaxi" href="https://okrelaxi.ch" rel="noopener">
+      <div class="mark" aria-hidden="true"><span>RELAXI</span></div>
+      <div class="txt">
+        <p class="label">Shop</p>
+        <p class="name">RELAXI</p>
+        <p class="desc">Das smarte Schröpfgerät mit Wärme und Rotlicht.</p>
+      </div>
+      <span class="arrow" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+    </a>
+  </nav>
+
+  <p class="handle">@arigon.ramosaj</p>
+  <div class="social">
+    <a href="https://www.instagram.com/arigon.ramosaj/" rel="noopener">Instagram</a>
+    <a href="https://www.tiktok.com/@arigon.ramosaj" rel="noopener">TikTok</a>
+  </div>
+
+  <footer>© 2026 Arigon Ramosaj</footer>
+</main>
+</body>
+</html>
